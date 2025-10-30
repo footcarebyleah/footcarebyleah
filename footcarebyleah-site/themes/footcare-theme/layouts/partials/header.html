@@ -1,0 +1,37 @@
+<header class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-2">
+                {{ $logo := resources.Get "images/logo.png" }}
+                {{ if $logo }}
+                {{ $logoResized := $logo.Resize "120x webp q85" }}
+                <img src="{{ $logoResized.RelPermalink }}" alt="리아풋케어 로고" class="h-10" width="{{ $logoResized.Width }}" height="{{ $logoResized.Height }}">
+                {{ end }}
+                <span class="text-xl font-bold text-primary">리아풋케어</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="text-gray-700 hover:text-primary transition">{{ .Name }}</a>
+                {{ end }}
+            </div>
+            
+            <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+            {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}" class="block py-2 text-gray-700 hover:text-primary transition">{{ .Name }}</a>
+            {{ end }}
+        </div>
+    </nav>
+</header>
+
+<script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+</script>

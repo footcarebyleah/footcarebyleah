@@ -1,0 +1,12 @@
+name = "Footcare Theme"
+license = "MIT"
+licenselink = "https://github.com/footcarebyleah/footcarebyleah-hugo/LICENSE"
+description = "리아풋케어 블로그 테마"
+homepage = "https://footcarebyleah.github.io/"
+tags = ["blog", "minimal", "korean"]
+features = ["blog", "responsive"]
+min_version = "0.121.0"
+
+[author]
+  name = "리아 풋케어"
+  homepage = "https://footcarebyleah.github.io/"

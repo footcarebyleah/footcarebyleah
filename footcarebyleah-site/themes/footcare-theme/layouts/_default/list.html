@@ -1,0 +1,60 @@
+{{ define "main" }}
+<div class="container mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold text-center mb-12">
+        <span class="section-title">발 건강 블로그</span>
+    </h1>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {{ range .Pages }}
+        <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            {{ if .Params.image }}
+            {{ $postImage := resources.Get (strings.TrimPrefix "/" .Params.image) }}
+            {{ if $postImage }}
+            {{ $postImageResized := $postImage.Resize "600x400 webp q85" }}
+            <img src="{{ $postImageResized.RelPermalink }}" alt="{{ .Title }}" class="w-full h-48 object-cover" width="{{ $postImageResized.Width }}" height="{{ $postImageResized.Height }}" loading="lazy">
+            {{ else }}
+            <div class="w-full h-48 bg-gray-200 flex items-center justify-center">
+                <i class="fas fa-image text-gray-400 text-4xl"></i>
+            </div>
+            {{ end }}
+            {{ else }}
+            <div class="w-full h-48 bg-gray-200 flex items-center justify-center">
+                <i class="fas fa-image text-gray-400 text-4xl"></i>
+            </div>
+            {{ end }}
+            
+            <div class="p-6">
+                <div class="flex flex-wrap gap-2 mb-3">
+                    {{ range .Params.categories }}
+                    <span class="inline-block bg-primary text-white text-xs px-3 py-1 rounded-full">{{ . }}</span>
+                    {{ end }}
+                </div>
+                
+                <h2 class="text-xl font-bold mb-3">
+                    <a href="{{ .Permalink }}" class="hover:text-primary transition">{{ .Title }}</a>
+                </h2>
+                
+                <p class="text-gray-600 mb-4 line-clamp-2">{{ .Description }}</p>
+                
+                <div class="flex items-center justify-between text-sm text-gray-500">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time>
+                    <a href="{{ .Permalink }}" class="text-primary font-medium hover:underline">자세히 보기 →</a>
+                </div>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+    
+    {{ if .Paginator.HasPrev }}
+    <div class="text-center">
+        <a href="{{ .Paginator.Prev.URL }}" class="inline-block btn-primary py-2 px-6 rounded-lg">이전 페이지</a>
+    </div>
+    {{ end }}
+    
+    {{ if .Paginator.HasNext }}
+    <div class="text-center mt-4">
+        <a href="{{ .Paginator.Next.URL }}" class="inline-block btn-primary py-2 px-6 rounded-lg">다음 페이지</a>
+    </div>
+    {{ end }}
+</div>
+{{ end }}
