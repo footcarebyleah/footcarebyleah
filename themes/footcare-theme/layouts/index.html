@@ -18,6 +18,14 @@
         background-color: white;
         padding: 0 10px;
     }
+    .service-img-placeholder {
+        height: 200px;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+    }
     @media (max-width: 768px) {
         .hero-text {
             font-size: 1.8rem;
@@ -57,57 +65,332 @@
                 <p class="text-2xl text-gray-800 leading-relaxed mb-4">"원장님 덕분에 더 이상 맨발이 두렵지 않아요."</p>
             </div>
         </div>
+        
+        <!-- 특징 및 케어 정보 섹션 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <!-- 왼쪽: 발 고민 및 위생 정보 -->
+            <div class="space-y-10">
+                <div>
+                    <h4 class="text-2xl font-semibold mb-4">발에 고민 있으신가요?</h4>
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        리아풋케어는 증상별 맞춤 케어로 두꺼운 발톱무좀·갈라지는 뒤꿈치·아픈 굳은살·파고드는 발톱을 편안하게 해결해 드립니다.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-2xl font-semibold mb-4">위생은 타협하지 않습니다.</h4>
+                    <p class="text-gray-700 text-lg mb-3">
+                        5단계 소독·멸균으로 안전을 지킵니다:
+                    </p>
+                    <ol class="list-decimal pl-8 space-y-2 text-gray-700 text-lg">
+                        <li>에탄올 1차 소독</li>
+                        <li>초음파 세척</li>
+                        <li>고온 건조</li>
+                        <li>180℃ 고온 멸균</li>
+                        <li>도구 개별 실링 보관</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- 오른쪽: 4개 카드 -->
+            <div class="grid grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="icon-circle mb-4">
+                        <i class="fas fa-user-md text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-center mb-2">전문성</h3>
+                    <p class="text-center text-gray-600">문제성 발에 특화된 1:1 전문 케어</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="icon-circle mb-4">
+                        <i class="fas fa-heart text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-center mb-2">정성</h3>
+                    <p class="text-center text-gray-600">작은 불편도 놓치지 않는 세심한 손길</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="icon-circle mb-4">
+                        <i class="fas fa-shield-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-center mb-2">위생</h3>
+                    <p class="text-center text-gray-600">5단계 소독·멸균 과정, 안심 위생 시스템</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md service-card">
+                    <div class="icon-circle mb-4">
+                        <i class="fas fa-smile text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-center mb-2">만족</h3>
+                    <p class="text-center text-gray-600">멀리서도 다시 찾게 되는 발관리의 차이</p>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- 서비스 섹션 -->
-<section id="services" class="py-20 bg-white">
+<section id="services" class="py-16">
     <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12">
-            <span class="section-title">주요 관리 서비스</span>
-        </h2>
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2 section-title">전문 서비스</h2>
+            <p class="text-gray-600 mt-4">리아 풋케어는 다양한 발 건강 문제에 대한 전문적인 해결책을 제공합니다</p>
+        </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- 발톱 케어 -->
-            <div class="service-card bg-white rounded-lg shadow-md p-6">
-                <div class="icon-circle mb-6">
-                    <i class="fas fa-hand-sparkles text-4xl"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- 서비스 1: 발톱 스케일링무좀 케어 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md service-card flex flex-col h-[400px]">
+                <div class="service-img-placeholder h-[200px] flex items-center justify-center">
+                    <span class="text-2xl text-gray-400">서비스 이미지</span>
                 </div>
-                <h3 class="text-2xl font-bold text-center mb-4">발톱 케어</h3>
-                <ul class="space-y-3 text-gray-700">
-                    <li><i class="fas fa-check text-primary mr-2"></i>발톱무좀 스케일링</li>
-                    <li><i class="fas fa-check text-primary mr-2"></i>두꺼운 발톱 관리</li>
-                    <li><i class="fas fa-check text-primary mr-2"></i>파고드는 발톱 완화</li>
-                    <li><i class="fas fa-check text-primary mr-2"></i>변형 발톱 정리</li>
-                </ul>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-3">발톱 스케일링‧무좀 케어</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-700">
+                            변색되고 두꺼워진 발톱?<br>섬세한 스케일링 관리가 필요해요.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">발톱 변색</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">두꺼운 발톱</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-0">무좀 발톱</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-0">멍든 발톱</span>
+                    </div>
+                </div>
             </div>
             
-            <!-- 각질/굳은살 케어 -->
-            <div class="service-card bg-white rounded-lg shadow-md p-6">
-                <div class="icon-circle mb-6">
-                    <i class="fas fa-spa text-4xl"></i>
+            <!-- 서비스 2: 발뒤꿈치 갈라짐 케어 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md service-card flex flex-col h-[400px]">
+                <div class="service-img-placeholder h-[200px] flex items-center justify-center">
+                    <span class="text-2xl text-gray-400">서비스 이미지</span>
                 </div>
-                <h3 class="text-2xl font-bold text-center mb-4">각질/굳은살 케어</h3>
-                <ul class="space-y-3 text-gray-700">
-                    <li><i class="fas fa-check text-primary mr-2"></i>갈라진 뒤꿈치 관리</li>
-                    <li><i class="fas fa-check text-primary mr-2"></i>거친 발각질 제거</li>
-                    <li><i class="fas fa-check text-primary mr-2"></i>굳은살/티눈 완화</li>
-                    <li><i class="fas fa-check text-primary mr-2"></i>발바닥 각질 정리</li>
-                </ul>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-3">발뒤꿈치 갈라짐 케어</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-700">
+                            뒤꿈치 갈라짐은 단순한 각질이 아니에요.<br>통증이 생기기 전에 부드럽게 관리해보세요.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">발뒤꿈치 굳은살</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">굳은살 갈라짐</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-0">발 건조함</span>
+                    </div>
+                </div>
             </div>
             
-            <!-- 종합 발 관리 -->
-            <div class="service-card bg-white rounded-lg shadow-md p-6">
-                <div class="icon-circle mb-6">
-                    <i class="fas fa-heart text-4xl"></i>
+            <!-- 서비스 3: 발각질 제거 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md service-card flex flex-col h-[400px]">
+                <div class="service-img-placeholder h-[200px] flex items-center justify-center">
+                    <span class="text-2xl text-gray-400">서비스 이미지</span>
                 </div>
-                <h3 class="text-2xl font-bold text-center mb-4">종합 발 관리</h3>
-                <ul class="space-y-3 text-gray-700">
-                    <li><i class="fas fa-check text-primary mr-2"></i>발 전체 케어</li>
-                    <li><i class="fas fa-check text-primary mr-2"></i>정기 발 관리</li>
-                    <li><i class="fas fa-check text-primary mr-2"></i>맞춤형 홈케어 안내</li>
-                    <li><i class="fas fa-check text-primary mr-2"></i>예방 관리 상담</li>
-                </ul>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-3">발각질 제거</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-700">
+                            두껍고 거친 발바닥,<br>지금보다 훨씬 매끄러워질 수 있어요.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">발껍질 벗겨짐</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">각화형 무좀</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-0">두꺼운 발바닥</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 서비스 4: 굳은살 & 티눈 제거 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md service-card flex flex-col h-[400px]">
+                <div class="service-img-placeholder h-[200px] flex items-center justify-center">
+                    <span class="text-2xl text-gray-400">서비스 이미지</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-3">굳은살 & 티눈 제거</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-700">
+                            눌리면 찌릿한 굳은살과 티눈,<br>참지 말고 편하게 관리받으세요.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">발 굳은살</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">발가락 티눈</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-0">발바닥 굳은살</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 서비스 5: 파고드는 발톱 관리 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md service-card flex flex-col h-[400px]">
+                <div class="service-img-placeholder h-[200px] flex items-center justify-center">
+                    <span class="text-2xl text-gray-400">서비스 이미지</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-3">파고드는 발톱 관리</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-700">
+                            살을 찌르는 발톱 때문에 걷기가 힘든가요?<br>염증과 통증, 부담 없이 줄여드립니다.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">파고드는 발톱</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">발톱 염증</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-0">내성발톱 통증</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 서비스 6: 문제성 손톱 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md service-card flex flex-col h-[400px]">
+                <div class="service-img-placeholder h-[200px] flex items-center justify-center">
+                    <span class="text-2xl text-gray-400">서비스 이미지</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="text-xl font-bold mb-3">문제성 손톱</h3>
+                    <div class="flex-grow">
+                        <p class="text-gray-700">
+                            두꺼워지고 색이 변한 손톱,<br>그대로 두지 말고 섬세하게 돌봐주세요.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap items-center mt-4">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">손톱무좀</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-1 mb-0">손톱 변색</span>
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-0">손톱 변형</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 관리 과정 섹션 -->
+<section id="process" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2 section-title">발 관리 과정</h2>
+            <p class="text-gray-600 mt-4">리아풋케어는 매 순간 세심함을 놓치지 않습니다. 내 발에 꼭 맞는 관리, 부담 없는 홈케어까지 한 번에 경험해 보세요.</p>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+            <!-- 스텝 1 -->
+            <div class="flex flex-row items-start mb-10">
+                <div class="flex-shrink-0 bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 md:mr-6">
+                    1
+                </div>
+                <div class="step-card pl-4 flex-grow">
+                    <h3 class="text-xl font-bold mb-2">편안한 상담으로 시작합니다</h3>
+                    <p class="text-gray-700">
+                        방문하시면 먼저 발 상태와 고민을 여쭙는 간단한 설문을 작성해요. 설문 결과를 바탕으로 전문가가 직접 발을 살펴보고, 현재 상황에 꼭 맞는 관리 계획을 함께 결정합니다. "내 발이 어떤 상태인지, 앞으로 어떻게 달라질지" 한눈에 이해하실 수 있도록 차근차근 설명드리니 걱정하지 않으셔도 됩니다.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 스텝 2 -->
+            <div class="flex flex-row items-start mb-10">
+                <div class="flex-shrink-0 bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 md:mr-6">
+                    2
+                </div>
+                <div class="step-card pl-4 flex-grow">
+                    <h3 class="text-xl font-bold mb-2">관리 전 기록을 남깁니다</h3>
+                    <p class="text-gray-700">
+                        본격적인 케어에 들어가기 전에 발을 여러 각도에서 촬영해요. 사진으로 현재 모습을 꼼꼼히 기록해 두면 관리 후 변화가 훨씬 선명하게 보입니다.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 스텝 3 -->
+            <div class="flex flex-row items-start mb-10">
+                <div class="flex-shrink-0 bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 md:mr-6">
+                    3
+                </div>
+                <div class="step-card pl-4 flex-grow">
+                    <h3 class="text-xl font-bold mb-2">맞춤 케어와 위생 관리</h3>
+                    <p class="text-gray-700">
+                       발톱 무좀 관리, 각질·굳은살 완화, 파고드는 발톱 케어 등 필요한 과정만 골라 진행합니다. 모든 도구는 멸균 과정을 거치며, 케어 중 신발과 양말까지 살균‧소독해 드려요. 섬세한 손길로 불편함을 최소화하고, 위생까지 챙기는 시간이라 안심하고 받으실 수 있습니다.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 스텝 4 -->
+            <div class="flex flex-row items-start mb-10">
+                <div class="flex-shrink-0 bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 md:mr-6">
+                    4
+                </div>
+                <div class="step-card pl-4 flex-grow">
+                    <h3 class="text-xl font-bold mb-2">변화 확인</h3>
+                    <p class="text-gray-700">
+                        관리가 끝나면 같은 각도에서 다시 촬영해 전후 사진을 나란히 보여드립니다. 눈으로 직접 변화를 확인하시면서 궁금한 점을 바로 물어보실 수 있어요.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- 스텝 5 -->
+            <div class="flex flex-row items-start">
+                <div class="flex-shrink-0 bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold mr-4 md:mr-6">
+                    5
+                </div>
+                <div class="step-card pl-4 flex-grow">
+                    <h3 class="text-xl font-bold mb-2">집에서도 이어지는 홈케어</h3>
+                    <p class="text-gray-700">
+                       관리실을 나선 뒤에도 편안함이 오래가도록 개인별 홈케어 방법을 안내합니다. 샤워 후 발을 말리는 작은 습관부터 제품 바르는 순서까지, 일상에서 쉽게 실천할 수 있는 팁만 담았어요. 궁금할 때 언제든 문의 주시면 추가로 도와드립니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 고객 후기 섹션 -->
+<section id="testimonials" class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2 section-title">고객 후기</h2>
+            <p class="text-gray-600 mt-4">고객님들이 직접 들려주신 리아풋케어 이야기</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- 후기 1 -->
+            <div class="testimonial-card p-6 rounded-lg">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary rounded-full w-10 h-10 flex items-center justify-center text-white mr-4">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">김OO님</h4>
+                        <div class="text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700">
+                    "발톱무좀 때문에 2년 넘게 신경 쓰였어요. 약을 바를 때마다 '이번엔 나아지겠지' 했는데 큰 변화가 없더라고요. 리아 풋케어에서는 먼저 현재 상태를 사진으로 보여주고, 단계별로 어떻게 관리할지 설명해 주셔서 믿음이 갔습니다. 세 번 방문했을 뿐인데 두꺼웠던 발톱이 얇아지고 색도 많이 맑아졌어요. 집에서 할 수 있는 발관리 방법까지 알려주셔서 유지가 훨씬 수월합니다."
+                </p>
+            </div>
+            
+            <!-- 후기 2 -->
+            <div class="testimonial-card p-6 rounded-lg">
+                <div class="flex items-start mb-4">
+                    <div class="bg-primary rounded-full w-10 h-10 flex items-center justify-center text-white mr-4">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold">이OO님</h4>
+                        <div class="text-yellow-500">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700">
+                    "발뒤꿈치가 너무 갈라져서 양말이 걸릴 정도였어요. 처음엔 '이렇게 심한 상태도 나아질까?' 걱정했는데, 리아 풋케어는 달랐습니다. 원장님께서 직접 발을 보시고 '관리하면 분명히 좋아질 거예요'라고 격려해 주셨고, 실제로 두 번 방문하고 나서 확실히 달라졌어요. 맨발로 걸어도 껄끄럽지 않고, 촉촉한 뒤꿈치를 유지하는 법까지 배워서 정말 감사해요."
+                </p>
             </div>
         </div>
     </div>
@@ -148,6 +431,40 @@
             <a href="/blog/" class="btn-primary inline-block py-3 px-8 rounded-lg font-medium">
                 블로그 전체보기
             </a>
+        </div>
+    </div>
+</section>
+
+<!-- 위치 안내 섹션 -->
+<section id="location" class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-2 section-title">오시는 길</h2>
+            <p class="text-gray-600 mt-4">리아 풋케어로 편안한 발 관리를 받으러 오세요</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-2xl font-bold mb-4">리아 풋케어</h3>
+                <div class="space-y-3 text-gray-700">
+                    <p><i class="fas fa-map-marker-alt text-primary mr-2"></i>경기도 가평군 가평읍 석봉로 166 1층</p>
+                    <p><i class="fas fa-phone text-primary mr-2"></i>010-3085-7718</p>
+                    <p><i class="fas fa-clock text-primary mr-2"></i>일요일~목요일: 10:00 - 20:00</p>
+                    <p><i class="fas fa-clock text-primary mr-2"></i>금요일,토요일: 휴무</p>
+                    <p><i class="fas fa-parking text-primary mr-2"></i>주차 가능</p>
+                    <p class="text-sm text-gray-500">※ 예약제로 운영됩니다</p>
+                </div>
+                
+                <div class="mt-6">
+                    <a href="tel:010-3085-7718" class="btn-primary inline-block py-3 px-6 rounded-lg font-medium">
+                        <i class="fas fa-phone-alt mr-2"></i>예약 문의하기
+                    </a>
+                </div>
+            </div>
+            
+            <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+                <p class="text-gray-500">지도 영역</p>
+            </div>
         </div>
     </div>
 </section>

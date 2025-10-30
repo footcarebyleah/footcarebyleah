@@ -1,13 +1,11 @@
 <header class="bg-white shadow-sm sticky top-0 z-50">
     <nav class="container mx-auto px-4 py-4">
         <div class="flex justify-between items-center">
-            <a href="/" class="flex items-center space-x-2">
+            <a href="/" class="flex items-center">
                 {{ $logo := resources.Get "images/logo.png" }}
                 {{ if $logo }}
-                {{ $logoResized := $logo.Resize "120x webp q85" }}
-                <img src="{{ $logoResized.RelPermalink }}" alt="리아풋케어 로고" class="h-10" width="{{ $logoResized.Width }}" height="{{ $logoResized.Height }}">
+                <img src="{{ $logo.RelPermalink }}" alt="리아풋케어 로고" class="h-12">
                 {{ end }}
-                <span class="text-xl font-bold text-primary">리아풋케어</span>
             </a>
             
             <div class="hidden md:flex space-x-8">

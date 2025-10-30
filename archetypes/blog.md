@@ -5,7 +5,7 @@ date: {{ .Date }}
 categories: []
 tags: []
 image: "images/your-image.jpg"
-author: "리아풋케어"
+author: "리아 풋케어"
 draft: true
 ---
 
