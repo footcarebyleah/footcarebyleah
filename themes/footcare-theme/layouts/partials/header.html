@@ -8,28 +8,51 @@
                 {{ end }}
             </a>
             
-            <div class="hidden md:flex space-x-8">
-                {{ range .Site.Menus.main }}
-                <a href="{{ .URL }}" class="text-gray-700 hover:text-primary transition">{{ .Name }}</a>
-                {{ end }}
+            <div class="hidden md:flex space-x-6">
+                <a href="/#about" class="hover:text-primary">소개</a>
+                <a href="/#services" class="hover:text-primary">서비스</a>
+                <a href="/#process" class="hover:text-primary">관리과정</a>
+                <a href="/blog/" class="hover:text-primary">블로그</a>
+                <a href="/#testimonials" class="hover:text-primary">고객후기</a>
+                <a href="/#location" class="hover:text-primary">위치안내</a>
             </div>
             
-            <button class="md:hidden text-gray-700" id="mobile-menu-button">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+            <div class="flex items-center gap-4">
+                <a href="tel:010-3085-7718" class="hidden md:inline-block btn-primary py-2 px-4 rounded-lg text-white font-medium">
+                    <i class="fas fa-phone-alt mr-2"></i>예약문의
+                </a>
+                <div class="hamburger md:hidden" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-            {{ range .Site.Menus.main }}
-            <a href="{{ .URL }}" class="block py-2 text-gray-700 hover:text-primary transition">{{ .Name }}</a>
-            {{ end }}
+        <div id="mobileMenu" class="mobile-menu">
+            <a href="/#about">소개</a>
+            <a href="/#services">서비스</a>
+            <a href="/#process">관리과정</a>
+            <a href="/blog/">블로그</a>
+            <a href="/#testimonials">고객후기</a>
+            <a href="/#location">위치안내</a>
         </div>
     </nav>
 </header>
 
 <script>
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
+    function toggleMenu() {
+        const menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('active');
+    }
+    
+    // 모바일 메뉴 외부 클릭 시 닫기
+    document.addEventListener('click', function(event) {
+        const menu = document.getElementById('mobileMenu');
+        const hamburger = document.querySelector('.hamburger');
+        if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+            menu.classList.remove('active');
+        }
     });
 </script>

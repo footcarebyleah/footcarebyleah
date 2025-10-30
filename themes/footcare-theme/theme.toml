@@ -8,5 +8,5 @@ features = ["blog", "responsive"]
 min_version = "0.121.0"
 
 [author]
-  name = "리아 풋케어"
+  name = "리아풋케어"
   homepage = "https://footcarebyleah.github.io/"
